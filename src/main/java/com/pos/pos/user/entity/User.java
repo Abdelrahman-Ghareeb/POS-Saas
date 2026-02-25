@@ -1,5 +1,6 @@
 package com.pos.pos.user.entity;
 
+import com.pos.pos.store.entity.Store;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import lombok.*;
@@ -27,6 +28,9 @@ public class User {
     private String phone;
 
     private UserRole role;
+
+    @ManyToOne
+    private Store store;
 
     private String fullName;
 
