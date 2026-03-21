@@ -1,5 +1,6 @@
 package com.pos.pos.user.entity;
 
+import com.pos.pos.branch.entity.Branch;
 import com.pos.pos.store.entity.Store;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -31,6 +32,8 @@ public class User {
 
     @ManyToOne
     private Store store;
+    @ManyToOne
+    private Branch branch;
 
     private String fullName;
 
