@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.pos.pos.branch.entity.Branch;
 import com.pos.pos.order.entity.Order;
 import com.pos.pos.order.enums.PaymentType;
-import com.pos.pos.shiftReport.ShiftReport;
+import com.pos.pos.shiftReport.entity.ShiftReport;
 import com.pos.pos.user.entity.User;
 import jakarta.persistence.*;
 import lombok.*;
@@ -29,7 +29,7 @@ public class Refund {
 
     private String reason;
 
-    private double amount;
+    private Double amount;
 
     @ManyToOne
     @JsonIgnore
